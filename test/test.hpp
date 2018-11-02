@@ -38,4 +38,4 @@
     )
 /**/
 
-#endif
+#endif // SAFE_NUMERIC_TEST_HPP
