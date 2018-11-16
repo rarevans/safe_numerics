@@ -91,7 +91,7 @@ constexpr inline operator+(
     // but gcc doesn't permit a multi-dimensional array to be be constexpr.
     // so we need to some ugly gymnastics to make our system work for all
     // all systems.
-    constexpr const enum safe_numerics_error result[order * order] = {
+    constexpr const safe_numerics_error result[order * order] = {
         // t == known_value
         //{
             // u == ...
@@ -160,7 +160,7 @@ constexpr inline operator-(
     using value_type = sum_value_type;
     constexpr const std::uint8_t order = static_cast<std::uint8_t>(value_type::count);
 
-    constexpr const enum safe_numerics_error result[order * order] = {
+    constexpr const safe_numerics_error result[order * order] = {
         // t == known_value
         //{
             // u == ...
@@ -270,7 +270,7 @@ constexpr inline operator*(
     using value_type = product_value_type;
     const std::uint8_t order = static_cast<std::uint8_t>(value_type::count);
 
-    constexpr const enum value_type::flag result[order * order] = {
+    constexpr const value_type::flag result[order * order] = {
         // t == less_than_min
         //{
             // u == ...
@@ -365,7 +365,7 @@ constexpr inline operator/(
     using value_type = product_value_type;
     const std::uint8_t order = static_cast<std::uint8_t>(value_type::count);
 
-    constexpr const enum value_type::flag result[order * order] = {
+    constexpr const value_type::flag result[order * order] = {
         // t == less_than_min
         //{
             // u == ...
@@ -460,7 +460,7 @@ constexpr inline operator%(
     using value_type = product_value_type;
     const std::uint8_t order = static_cast<std::uint8_t>(value_type::count);
 
-    constexpr const enum value_type::flag result[order * order] = {
+    constexpr const value_type::flag result[order * order] = {
         // t == less_than_min
         //{
             // u == ...
